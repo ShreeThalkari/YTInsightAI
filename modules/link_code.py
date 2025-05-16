@@ -10,7 +10,6 @@ class Code:
             elif "youtube.com" in parsed_url.netloc:
                 query = parse_qs(parsed_url.query)
                 return (query["v"][0]) if "v" in query else None
-    
         except Exception as e:
             print("Exception Parsing URL: ", e)
             return None
