@@ -1,6 +1,6 @@
 from youtube_transcript_api import (YouTubeTranscriptApi, YouTubeTranscriptApiException, VideoUnavailable, TranscriptsDisabled, NoTranscriptFound, CouldNotRetrieveTranscript)
 import langcodes
-from deep_translator import GoogleTranslator
+#from deep_translator import GoogleTranslator
 import textwrap
 
 class Fetecher:
@@ -16,7 +16,7 @@ class Fetecher:
             for snippet in transcript.fetch():
                 textlist.append(snippet.text)
             text = " ".join(textlist).replace("\n", " ").strip()
-
+            
             return text    
         
         except (VideoUnavailable, TranscriptsDisabled, NoTranscriptFound, CouldNotRetrieveTranscript, YouTubeTranscriptApiException, Exception) as e:
