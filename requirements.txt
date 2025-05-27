@@ -1,0 +1,6 @@
+transformers==4.40.1
+torch>=2.0.0
+spacy==3.7.2
+langcodes==3.3.0
+youtube-transcript-api==0.6.2
+textwrap3==0.9.2
